@@ -3,14 +3,5 @@ import Prisma from '@prisma/client'
 
 export let prisma: PrismaClient
 
-console.debug('Prisma wrapper is called');
-
-if (Prisma === undefined) {
-  console.debug('Default export is undefined');
-  import('@prisma/client').then(({ PrismaClient }) => {
-    prisma = new PrismaClient()
-  })
-} else {
-  console.debug('Default export is there!');
-  prisma = new Prisma.PrismaClient()
-}
+console.debug('Prisma wrapper is called; no branching');
+prisma = new Prisma.PrismaClient()
