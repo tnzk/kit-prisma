@@ -3,5 +3,5 @@ import Prisma from '@prisma/client'
 
 export let prisma: PrismaClient
 
-console.debug('Prisma wrapper is called; no branching');
+console.debug('Default export is there!');
 prisma = new Prisma.PrismaClient()
